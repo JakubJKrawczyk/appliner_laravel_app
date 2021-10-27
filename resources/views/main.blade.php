@@ -5,7 +5,7 @@
 <body>
 
 <div style="text-align:center;">
-Hello on main site
+Witaj na stronie aplikacji Appliner. tu bedzie dziać się magia! :D
 </div>
 </head>
 
