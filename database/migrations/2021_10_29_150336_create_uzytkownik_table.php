@@ -19,14 +19,13 @@ class CreateUzytkownikTable extends Migration
             $table->Text('Login')->Unique();
             $table->Text('Imie');
             $table->Text('email');
-            $table->Text('Nazwisko');
-            $table->unsignedBigInteger('Miasto');
+            $table->Text('Nazwisko');           
             $table->Text('Telefon');
             $table->unsignedBigInteger('TypKonta');
             $table->Text('NIP')->Unique()->nullable();
             $table->Text('NazwaFirmy')->nullable();
             
-            $table->foreign('Miasto')->references('MiastoID')->on('miasto');
+          
             $table->foreign('TypKonta')->references('TypKontaID')->on('typkonta');
         });
     }
