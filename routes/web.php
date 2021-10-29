@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ApplinerController;
-use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-
-Route::get('/mainpage', function (Request $request) {
-
-    return view('main.index');
+Route::get('/', function () {
+    return view('welcome');
 });
-Route::get('/main', [ApplinerController::Class, 'create']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
