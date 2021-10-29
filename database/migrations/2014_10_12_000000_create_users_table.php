@@ -22,13 +22,14 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('imie');
-            $table->string('Nazwisko');           
+            $table->string('Nazwisko');
             $table->string('Telefon');
-            $table->string('NIP')->Unique()->nullable();
+            $table->UnsignedBigInteger('TypKonta');
+            $table->string('NIP')->unique()->nullable();
             $table->string('NazwaFirmy')->nullable();
-            $table->foreignId('TypKonta')->constrained('typkonta');
-            
+            $table->foreign('TypKonta')->references('TypKontaID')->on('typkonta');
         });
+    
     }
 
     /**
