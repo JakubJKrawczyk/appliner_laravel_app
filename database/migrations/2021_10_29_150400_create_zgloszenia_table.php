@@ -21,7 +21,7 @@ class CreateZgloszeniaTable extends Migration
             $table->unsignedBigInteger('Status');
             $table->foreign('Konsultant')->references('KonsultantID')->on('konsultant');
             $table->foreign('Status')->references('TypStatusID')->on('typstatus');
-            $table->foreign('Uzytkownik')->references('UzytkownikID')->on('uzytkownik');
+            $table->foreign('Uzytkownik')->references('UzytkownikID')->on('users');
         });
     }
 
