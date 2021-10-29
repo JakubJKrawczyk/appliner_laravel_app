@@ -15,12 +15,12 @@ class CreateKonsultantTable extends Migration
     {
         Schema::create('konsultant', function (Blueprint $table) {
             $table->id('KonsultantID');
-            $table->text('Login')->Unique();
-            $table->text('Haslo');
-            $table->text('Imie');
-            $table->Text('email');
-            $table->text('Nazwisko');
-            $table->text('Telefon');
+            $table->string('Login')->Unique();
+            $table->string('Haslo');
+            $table->string('Imie');
+            $table->string('email');
+            $table->string('Nazwisko');
+            $table->string('Telefon');
             $table->unsignedBigInteger('Status');
             $table->foreign('Status')->references('StatusKonsultantID')->on('statuskonsultant');
         });

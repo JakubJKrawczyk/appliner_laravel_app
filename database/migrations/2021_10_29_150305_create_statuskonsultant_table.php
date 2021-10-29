@@ -15,7 +15,7 @@ class CreateStatuskonsultantTable extends Migration
     {
         Schema::create('statuskonsultant', function (Blueprint $table) {
             $table->id('StatusKonsultantID');
-            $table->text('NazwaStatusu');
+            $table->string('NazwaStatusu');
         });
     }
 
