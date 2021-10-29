@@ -18,6 +18,7 @@ class CreateUzytkownikTable extends Migration
             $table->Text('Haslo');
             $table->Text('Login')->Unique();
             $table->Text('Imie');
+            $table->Text('email');
             $table->Text('Nazwisko');
             $table->unsignedBigInteger('Miasto');
             $table->Text('Telefon');

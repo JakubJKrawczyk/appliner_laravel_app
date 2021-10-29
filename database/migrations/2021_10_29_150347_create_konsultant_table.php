@@ -18,6 +18,7 @@ class CreateKonsultantTable extends Migration
             $table->text('Login')->Unique();
             $table->text('Haslo');
             $table->text('Imie');
+            $table->Text('email');
             $table->text('Nazwisko');
             $table->text('Telefon');
             $table->unsignedBigInteger('Status');
