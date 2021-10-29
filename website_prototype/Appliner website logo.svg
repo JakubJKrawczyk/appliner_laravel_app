@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg3048"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Appliner website logo v.2.svg">
+  <defs
+     id="defs3042">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient980"
+       id="linearGradient992"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-441.80599,99.245541)"
+       x1="509.26865"
+       y1="-389.97101"
+       x2="533.56006"
+       y2="906.56702" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient980">
+      <stop
+         style="stop-color:#eb8628;stop-opacity:1"
+         offset="0"
+         id="stop978" />
+      <stop
+         style="stop-color:#ff00cc;stop-opacity:1"
+         offset="1"
+         id="stop976" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.0625"
+     inkscape:cx="574.93967"
+     inkscape:cy="1429.1296"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     showborder="false"
+     inkscape:window-width="1460"
+     inkscape:window-height="1009"
+     inkscape:window-x="130"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3045">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path990"
+       style="fill:url(#linearGradient992);fill-opacity:1;stroke-width:9.68931;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -116.09666,-701.9639 -621.24079,1702.3407 333.6331,0.01 178.55689,-489.2912 470.68079,0.023 -114.3758,-313.42056 -241.9291,-0.0151 178.2342,-488.4062 109.0227,298.7442907 0.96081,-0.35089 169.92751,465.6465593 332.537,-0.031 -428.8847,-1175.247 z m 835.64711,1283.8794 -332.5369,0.031 23.5329,64.4842 332.5369,-0.031 z m 63.1729,173.1121 -333.6213,0.031 24.2783,66.5289 333.6211,-0.031 z m 63.9221,175.1573 -333.6253,0.023 25.6176,70.196 333.6372,0.01 z" />
+  </g>
+</svg>
