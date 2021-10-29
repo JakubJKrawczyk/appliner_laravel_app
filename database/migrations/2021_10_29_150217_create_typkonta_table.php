@@ -15,7 +15,7 @@ class CreateTypkontaTable extends Migration
     {
         Schema::create('typkonta', function (Blueprint $table) {
             $table->id('TypKontaID');
-            $table->Text('NazwaTypu')->Unique();
+            $table->string('NazwaTypu')->Unique();
         });
     }
 

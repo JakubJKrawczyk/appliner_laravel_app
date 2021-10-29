@@ -15,7 +15,7 @@ class CreateTypstatusTable extends Migration
     {
         Schema::create('typstatus', function (Blueprint $table) {
             $table->id('TypStatusID');
-            $table->text('NazwaTypu');
+            $table->string('NazwaTypu');
         });
     }
 
