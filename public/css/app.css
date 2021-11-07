@@ -18381,6 +18381,10 @@ select {
   --tw-gradient-from: #831843;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(131, 24, 67, 0));
 }
+.from-mylogo {
+  --tw-gradient-from: #eb8628;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(131, 24, 67, 0));
+}
 
 .hover\:from-transparent:hover {
   --tw-gradient-from: transparent;
@@ -20564,6 +20568,9 @@ select {
 
 .to-pink-900 {
   --tw-gradient-to: #831843;
+}
+.to-mylogo {
+  --tw-gradient-to: #ff00cc;
 }
 
 .hover\:to-transparent:hover {

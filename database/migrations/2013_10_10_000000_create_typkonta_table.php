@@ -17,6 +17,14 @@ class CreateTypkontaTable extends Migration
             $table->id('TypKontaID');
             $table->string('NazwaTypu')->Unique();
         });
+        DB::table('typkonta')->insert(
+            array(
+                ['TypkontaID' => '1',
+                'NazwaTypu' => 'Zwykly'],
+                ['TypkontaID' => '2',
+                'NazwaTypu' => 'Firma'],
+                )   
+            );
     }
 
     /**
