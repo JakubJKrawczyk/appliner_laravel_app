@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('UzytkownikID');
+            $table->id('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -24,12 +24,12 @@ class CreateUsersTable extends Migration
             $table->string('imie');
             $table->string('Nazwisko');
             $table->string('Telefon');
-            $table->UnsignedBigInteger('TypKonta');
+            $table->UnsignedBigInteger('TypKonta')->default("1");
             $table->string('NIP')->unique()->nullable();
             $table->string('NazwaFirmy')->nullable();
             $table->foreign('TypKonta')->references('TypKontaID')->on('typkonta');
         });
-    
+        
     }
 
     /**
