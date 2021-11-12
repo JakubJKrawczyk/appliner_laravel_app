@@ -24,12 +24,12 @@ class CreateUsersTable extends Migration
             $table->string('imie');
             $table->string('Nazwisko');
             $table->string('Telefon');
-            $table->UnsignedBigInteger('TypKonta')->default("1");
+            $table->UnsignedBigInteger('TypKonta')->nullable();
             $table->string('NIP')->unique()->nullable();
             $table->string('NazwaFirmy')->nullable();
             $table->foreign('TypKonta')->references('TypKontaID')->on('typkonta');
         });
-        
+
     }
 
     /**

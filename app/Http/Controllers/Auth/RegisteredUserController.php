@@ -33,7 +33,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -43,20 +43,32 @@ class RegisteredUserController extends Controller
             'phone_number' => ['required', 'string', 'max:40'],
             'company_name' => [ 'nullable','string', 'max:40'],
             'nip' => ['nullable','string', 'max:40']
-            
-        ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'imie' => $request->first_name,
-            'Nazwisko' => $request->second_name,
-            'Telefon' => $request->phone_number,
-            'NIP' => $request->nip,
-            'NazwaFirmy' => $request->company_name
         ]);
-
+        if(empty($request->company_name) || empty($request->nip)){
+          $user = User::create([
+              'name' => $request->name,
+              'email' => $request->email,
+              'password' => Hash::make($request->password),
+              'imie' => $request->first_name,
+              'Nazwisko' => $request->second_name,
+              'Telefon' => $request->phone_number,
+              'TypKonta'=>'1'
+          ]);
+        }
+        else{
+          $user = User::create([
+              'name' => $request->name,
+              'email' => $request->email,
+              'password' => Hash::make($request->password),
+              'imie' => $request->first_name,
+              'Nazwisko' => $request->second_name,
+              'Telefon' => $request->phone_number,
+              'NIP' => $request->nip,
+              'NazwaFirmy' => $request->company_name,
+              'TypKonta'=>'2'
+          ]);
+      }
         event(new Registered($user));
 
         Auth::login($user);

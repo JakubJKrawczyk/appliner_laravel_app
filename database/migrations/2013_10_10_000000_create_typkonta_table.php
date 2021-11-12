@@ -23,7 +23,7 @@ class CreateTypkontaTable extends Migration
                 'NazwaTypu' => 'Zwykly'],
                 ['TypkontaID' => '2',
                 'NazwaTypu' => 'Firma'],
-                )   
+                )
             );
     }
 
@@ -34,6 +34,7 @@ class CreateTypkontaTable extends Migration
      */
     public function down()
     {
+      Schema::dropIfExists('users');
         Schema::dropIfExists('typkonta');
     }
 }
