@@ -3,25 +3,24 @@
 namespace App\Models;
 
 
-
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
+
 class Konsultant extends Authenticatable
 {
-  use HasApiTokens, HasFactory, Notifiable;
-protected $table = 'konsultant';
-protected $primaryKey = 'KonsultantID';
+  use Notifiable;
+  protected $guard = 'konsultant';
+  protected $table = 'konsultant';
+  protected $primaryKey = 'KonsultantID';
   /**
    * The attributes that are mass assignable.
    *
    * @var string[]
    */
   protected $fillable = [
-      'Login',
-      'Haslo',
+      'Login','password','Imie','Nazwisko','email','telefon',
   ];
 
   /**
@@ -30,9 +29,15 @@ protected $primaryKey = 'KonsultantID';
    * @var array
    */
   protected $hidden = [
-      'Haslo'
+      'password'
   ];
 
+  public function setPasswordAttribute($value)
+  {
 
+      if (strlen($value) != 60) {
+          return $this->attributes['password'] = Hash::make($value);
+      }
+  }
 
 }
