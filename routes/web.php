@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
+//Route to user array 
+Route::get('/',[MainController::class, 'index']);
+
+//site post 
+
+Route::get('/{postID}', [MainController::class, 'showPost']);
 require __DIR__.'/auth.php';
