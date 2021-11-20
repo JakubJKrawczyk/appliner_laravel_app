@@ -21,7 +21,8 @@ Route::get('/dashboard', function () {
 //Route to user array 
 Route::get('/',[MainController::class, 'index']);
 
-//site post 
 
-Route::get('/{postID}', [MainController::class, 'showPost']);
+
+
+Route::get('/login',[MainController::class, 'login'])->name('login');
 require __DIR__.'/auth.php';

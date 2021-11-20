@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <h1>Post nr. {{$postId}}</h1>
-    <h3>{{$post}}</h3>
+    <h1>Home Page</h1>
+    <a href="{{route('login')}}">Login</a>
 </body>
 </html>
