@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Illuminate\Support\Facades\Session;
 use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
@@ -22,10 +22,20 @@ class RedirectIfAuthenticated
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
+          switch($guard){
+            case 'konsultant':
+            if (Auth::guard($guard)->check()) {
+                return redirect()->route('dashboard-konsultant');
+            }
+            break;
+            default:
             if (Auth::guard($guard)->check()) {
                 return redirect(RouteServiceProvider::HOME);
             }
+            break;
+          }
         }
+
 
         return $next($request);
     }

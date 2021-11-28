@@ -2,6 +2,9 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Arr;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -15,7 +18,36 @@ class Handler extends ExceptionHandler
     protected $dontReport = [
         //
     ];
+    public function report(Throwable $exception)
+   {
+       parent::report($exception);
+   }
 
+   public function render($request, Throwable $exception)
+   {
+       return parent::render($request, $exception);
+   }
+
+   protected function unauthenticated($request, AuthenticationException $exception)
+  {
+      if ($request->expectsJson()) {
+          return response()->json(['error' => 'Unauthenticated.'], 401);
+      }
+
+      $guard = Arr::get($exception->guards(), 0);
+
+     switch ($guard) {
+       case 'konsultant':
+         $login='login-konsultant';
+         break;
+
+       default:
+         $login='login';
+         break;
+     }
+     Session::forget('url.intended');
+      return redirect()->route($login);
+  }
     /**
      * A list of the inputs that are never flashed for validation exceptions.
      *

@@ -25,7 +25,7 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest');
 Route::get('/login-konsultant',[KonsultantController::class,'create'])
-                ->middleware('guest:konsultant')
+                ->middleware(['guest:konsultant'])
                 ->name('login-konsultant');
 Route::post('/login-konsultant',[KonsultantController::class,'store'])
                 ->middleware('guest:konsultant');
@@ -67,3 +67,6 @@ Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store']
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
                 ->name('logout');
+Route::post('/logout-konsultant', [KonsultantController::class, 'destroy'])
+                                ->middleware('auth:konsultant')
+                                ->name('logout-konsultant');
