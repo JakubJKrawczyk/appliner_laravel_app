@@ -21,10 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->string('imie');
+            $table->string('imie')->default("");
             $table->string('Nazwisko');
-            $table->string('Telefon');
-            $table->UnsignedBigInteger('TypKonta')->nullable();
+            $table->string('Telefon')->nullable();
+            $table->UnsignedBigInteger('TypKonta');
             $table->string('NIP')->unique()->nullable();
             $table->string('NazwaFirmy')->nullable();
             $table->foreign('TypKonta')->references('TypKontaID')->on('typkonta');
