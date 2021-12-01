@@ -19,7 +19,10 @@ class KonsultantController extends Controller
       );
       if(Auth::guard('konsultant')->attempt(['email'=>$request->email,'password'=>$request->password])){
         $request->session()->regenerate();
-        return redirect()->intended('/dashboard-konsultant');
+        if(Auth::guard('konsultant')->user()->is_admin == 1)
+          return redirect()->intended('/dashboard-admin');
+        else
+          return redirect()->intended('/dashboard-konsultant');
       }
       return back()->withInput($request->only('login'));
     }

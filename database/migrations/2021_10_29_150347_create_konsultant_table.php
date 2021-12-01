@@ -22,6 +22,7 @@ class CreateKonsultantTable extends Migration
             $table->string('Nazwisko');
             $table->string('Telefon');
             $table->unsignedBigInteger('Status')->nullable();
+            $table->boolean('is_admin')->nullable();
             $table->timestamps();
             $table->foreign('Status')->references('StatusKonsultantID')->on('statuskonsultant');
         });

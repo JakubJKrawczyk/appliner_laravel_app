@@ -21,6 +21,11 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard-konsultant',function (){
   return view ('/dashboard-konsultant');
 })->middleware(['auth:konsultant','auth'])->name('dashboard-konsultant');
+
+Route::get('/dashboard-admin',function(){
+  return view('dashboard-admin');
+})->name('dashboard-admin')->middleware('is_admin');
+
 require __DIR__.'/auth.php';
 //Route to user
 Route::get('/',[MainController::class,'index']);

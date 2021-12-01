@@ -22,7 +22,7 @@ class Konsultant extends Authenticatable
    * @var string[]
    */
   protected $fillable = [
-      'Login','password','Imie','Nazwisko','email','telefon',
+      'Login','password','Imie','Nazwisko','email','telefon', 'is_admin'
   ];
 
   /**
