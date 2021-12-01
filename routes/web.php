@@ -15,14 +15,17 @@ use App\Http\Controllers\MainController;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})
+->middleware(['auth'])
+->name('dashboard');
+Route::get('/dashboard-konsultant',function (){
+  return view ('/dashboard-konsultant');
+})->middleware(['auth:konsultant','auth'])->name('dashboard-konsultant');
 
+Route::get('/dashboard-admin',function(){
+  return view('dashboard-admin');
+})->name('dashboard-admin')->middleware('is_admin');
 
-//Route to user array 
-Route::get('/',[MainController::class, 'index']);
-
-
-
-
-Route::get('/login',[MainController::class, 'login'])->name('login');
 require __DIR__.'/auth.php';
+//Route to user
+Route::get('/',[MainController::class,'index']);

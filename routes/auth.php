@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\KonsultantController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/register', [RegisteredUserController::class, 'create'])
@@ -23,7 +24,11 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest');
-
+Route::get('/login-konsultant',[KonsultantController::class,'create'])
+                ->middleware(['guest:konsultant'])
+                ->name('login-konsultant');
+Route::post('/login-konsultant',[KonsultantController::class,'store'])
+                ->middleware('guest:konsultant');
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.request');
@@ -62,3 +67,6 @@ Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store']
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
                 ->name('logout');
+Route::post('/logout-konsultant', [KonsultantController::class, 'destroy'])
+                                ->middleware('auth:konsultant')
+                                ->name('logout-konsultant');
