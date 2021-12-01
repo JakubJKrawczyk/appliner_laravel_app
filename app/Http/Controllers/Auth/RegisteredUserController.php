@@ -35,7 +35,6 @@ class RegisteredUserController extends Controller
     {
 
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'first_name' => ['required', 'string', 'max:40'],
@@ -47,7 +46,6 @@ class RegisteredUserController extends Controller
         ]);
         if(empty($request->company_name) || empty($request->nip)){
           $user = User::create([
-              'name' => $request->name,
               'email' => $request->email,
               'password' => Hash::make($request->password),
               'imie' => $request->first_name,
@@ -58,7 +56,6 @@ class RegisteredUserController extends Controller
         }
         else{
           $user = User::create([
-              'name' => $request->name,
               'email' => $request->email,
               'password' => Hash::make($request->password),
               'imie' => $request->first_name,

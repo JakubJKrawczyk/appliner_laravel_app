@@ -15,7 +15,6 @@ class CreateKonsultantSeeder extends Seeder
        {
            $user = [
                [
-                  'Login'=>'login1',
                   'email'=>'admin@itsolutionstuff.com',
                   'Imie'=>'Piotr',
                   'Nazwisko'=>'Kowalski',
@@ -24,7 +23,6 @@ class CreateKonsultantSeeder extends Seeder
                   'password'=> '123456',
                ],
                [
-                  'Login'=>'login2',
                   'email'=>'user@itsolutionstuff.com',
                   'Imie'=>'Jan',
                   'Nazwisko'=>'Nowak',

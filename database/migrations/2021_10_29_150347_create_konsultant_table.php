@@ -15,7 +15,6 @@ class CreateKonsultantTable extends Migration
     {
         Schema::create('konsultant', function (Blueprint $table) {
             $table->id('KonsultantID');
-            $table->string('Login')->Unique();
             $table->string('password');
             $table->string('Imie');
             $table->string('email');

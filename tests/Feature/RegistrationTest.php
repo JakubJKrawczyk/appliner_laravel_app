@@ -22,7 +22,6 @@ class RegistrationTest extends TestCase
 
     public function test_if_can_register(){
         $response = $this->post('/register', [
-            'name'=>'Jacob',
         'email'=>'jacob@gamil.com',
         'password'=>'jacob123',
         'password_confirmation' => 'jacob123',
