@@ -10,6 +10,6 @@
 <body>
     
     <h1>Home Page</h1>
-    <a href="{{route('login')}}">Login</a>
+    <a href="<?php echo e(route('login')); ?>">Login</a>
 </body>
-</html>
+</html><?php /**PATH C:\Users\user\Documents\Projects\appliner_laravel_app\resources\views/home.blade.php ENDPATH**/ ?>
