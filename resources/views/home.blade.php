@@ -9,8 +9,9 @@
 
 <body>
 
-    <h1>Home Page</h1>
-    <a href="{{route('login')}}">Login</a>
+<x-footer />
+  <!--  <h1>Home Page</h1>
+    <a href="{{route('login')}}">Login</a>-->
 
 </body>
 </html>
