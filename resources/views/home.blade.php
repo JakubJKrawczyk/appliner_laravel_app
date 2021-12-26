@@ -13,10 +13,17 @@
 
 <body>
 
+<<<<<<< HEAD
     <h1>Home Page</h1>
     <a href="{{route('login')}}">Login</a>
     <div id="box">
       <x-nav/>
     </div>
+=======
+<x-footer />
+  <!--  <h1>Home Page</h1>
+    <a href="{{route('login')}}">Login</a>-->
+
+>>>>>>> 61dd10f48a2703e4cd2e425a9f86b78bde33c2e5
 </body>
 </html>

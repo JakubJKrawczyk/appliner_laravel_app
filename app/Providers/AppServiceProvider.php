@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use App\View\Components\Footer;
 use App\View\Components\Nav;
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::component('nav', Nav::class);
+        Blade::component('footer', Footer::class);
     }
+    
 }
