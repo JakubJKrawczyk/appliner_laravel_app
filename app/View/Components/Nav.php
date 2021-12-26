@@ -11,12 +11,10 @@ class Nav extends Component
      *
      * @return void
      */
-     public $message;
-     public $alert;
-    public function __construct($message,$alert)
+
+    public function __construct()
     {
-        $this->message = $message;
-        $this->alert = $alert;
+
     }
 
     /**
