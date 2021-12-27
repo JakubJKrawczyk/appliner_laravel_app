@@ -26,10 +26,10 @@
 
         <div class="footer-menu-list-box">
             <ul class="footer-menu-list">
-                <li>Kontakt</li>
-                <li>Login</li>
-                <li>Register</li>
-                <li>Main Page</li>
+                <li >Kontakt</li>
+                <li > <a href="{{ route('login') }}">Login</a></li>
+                <li > <a href="{{ route('register') }}">Register</a></li>
+                <li > <a href="{{ route('home') }}">Main Page</a></li>
             </ul>
         </div>
     </div>
