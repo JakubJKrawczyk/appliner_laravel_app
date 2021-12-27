@@ -28,4 +28,4 @@ Route::get('/dashboard-admin',function(){
 
 require __DIR__.'/auth.php';
 //Route to user
-Route::get('/',[MainController::class,'index']);
+Route::get('/',[MainController::class,'index'])->name('home');

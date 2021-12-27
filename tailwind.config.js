@@ -9,6 +9,8 @@ module.exports = {
 
     theme: {
       colors:{
+        transparent: 'transparent',
+        current: 'currentColor',
         'darkx':'#393939',
       },
         extend: {

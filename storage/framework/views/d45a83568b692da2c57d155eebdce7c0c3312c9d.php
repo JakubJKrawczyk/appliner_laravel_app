@@ -34,3 +34,4 @@
         </div>
     </div>
 </div>
+<?php /**PATH C:\appliner\appliner_laravel_app\resources\views/components/footer.blade.php ENDPATH**/ ?>
