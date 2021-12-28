@@ -4,19 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Nav extends Component
+class Option extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-     //public $content;
-     public $logo;
-    public function __construct($logo)
+     public $text
+    public function __construct($text)
     {
-      $this->logo = $logo;
-    //  $this->content = $content;
+        $this->text = $text
     }
 
     /**
@@ -26,6 +24,6 @@ class Nav extends Component
      */
     public function render()
     {
-        return view('components.nav');
+        return view('components.option');
     }
 }

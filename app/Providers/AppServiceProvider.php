@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use App\View\Components\Footer;
 use App\View\Components\Nav;
+use App\View\Components\Option;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -27,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Blade::component('nav', Nav::class);
         Blade::component('footer', Footer::class);
+        Blade::component('option', Option::class);
     }
-    
+
 }

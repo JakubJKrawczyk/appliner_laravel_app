@@ -14,7 +14,7 @@
 
 <body style="background-color:#393939">
 <?php if (isset($component)) { $__componentOriginal4ef3f5a8a8724cef81dcbc68e612558cabc1c480 = $component; } ?>
-<?php $component = $__env->getContainer()->make(App\View\Components\Nav::class, []); ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Nav::class, ['logo' => 'true']); ?>
 <?php $component->withName('nav'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -37,7 +37,7 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
-    <div class="grid grid-rows-2 grid-cols-2 gap-x-28 gap-y-10 ml-auto mr-auto" style="width:800px;margin-top:180px;grid-template-columns: 330px 330px; grid-template-rows:200px 200px">
+    <div class="grid gap-x-28 gap-y-10 ml-auto mr-auto" style="width:800px;margin-top:180px;grid-template-columns: 330px 330px; grid-template-rows:200px 200px">
       <div class="shadow-md rounded-lg p-5">— Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi
