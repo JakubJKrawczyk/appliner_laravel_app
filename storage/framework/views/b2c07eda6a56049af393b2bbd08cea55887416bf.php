@@ -27,7 +27,56 @@
 <?php endif; ?>
 <div class="float-left w-4/5">
   <section class="bg-white relative" style="height:1124px;font-family: 'Ubuntu', sans-serif;">
-      <div><?php echo e(Auth::user()->name); ?></div>
+    <div class="grid gap-x-28 gap-y-10 ml-auto mr-auto" style="width:592px;padding-top:180px;grid-template-columns: 240px 240px; grid-template-rows:240px 240px">
+    <?php if (isset($component)) { $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Option::class, ['text' => 'Dodaj zgłoszenie']); ?>
+<?php $component->withName('option'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+<?php if (isset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6)): ?>
+<?php $component = $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6; ?>
+<?php unset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+    <?php if (isset($component)) { $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Option::class, ['text' => 'Moje zgłoszenia']); ?>
+<?php $component->withName('option'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+<?php if (isset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6)): ?>
+<?php $component = $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6; ?>
+<?php unset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+    <?php if (isset($component)) { $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Option::class, ['text' => 'Moje konto']); ?>
+<?php $component->withName('option'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+<?php if (isset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6)): ?>
+<?php $component = $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6; ?>
+<?php unset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+    <?php if (isset($component)) { $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Option::class, ['text' => 'Lorem ipsum']); ?>
+<?php $component->withName('option'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+<?php if (isset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6)): ?>
+<?php $component = $__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6; ?>
+<?php unset($__componentOriginal5b95222ba631b6a2f496c127eafb27b814614da6); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+    </div>
 
 
   </section>

@@ -11,10 +11,10 @@ class Option extends Component
      *
      * @return void
      */
-     public $text
+     public $text;
     public function __construct($text)
     {
-        $this->text = $text
+        $this->text = $text;
     }
 
     /**

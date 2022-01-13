@@ -16,7 +16,12 @@
 <x-nav logo="false"/>
 <div class="float-left w-4/5">
   <section class="bg-white relative" style="height:1124px;font-family: 'Ubuntu', sans-serif;">
-  
+    <div class="grid gap-x-28 gap-y-10 ml-auto mr-auto" style="width:592px;padding-top:180px;grid-template-columns: 240px 240px; grid-template-rows:240px 240px">
+    <x-option text="Dodaj zgłoszenie"/>
+    <x-option text="Moje zgłoszenia"/>
+    <x-option text="Moje konto"/>
+    <x-option text="Lorem ipsum"/>
+    </div>
 
 
   </section>

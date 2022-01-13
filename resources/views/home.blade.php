@@ -19,6 +19,7 @@
     <div class="absolute top-8 left-0 font-extrabold text-5xl" style="color:#393939">liner</div>
     <div class="w-96 ml-auto mr-auto">
       <h1 class="text-center font-bold pt-40 text-2xl">Title</h1>
+    
       <p class="text-justify leading-6">
         — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
