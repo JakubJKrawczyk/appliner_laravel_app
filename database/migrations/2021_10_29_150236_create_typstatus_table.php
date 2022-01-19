@@ -17,6 +17,14 @@ class CreateTypstatusTable extends Migration
             $table->id('TypStatusID');
             $table->string('NazwaTypu');
         });
+        DB::table('typstatus')->insert(
+            array(
+                ['TypStatusID' => '0',
+                'NazwaTypu' => 'Dodane'],
+                ['TypStatusID' => '2',
+                'NazwaTypu' => 'Rozwiązane']
+                )
+            );
     }
 
     /**

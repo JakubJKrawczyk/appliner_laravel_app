@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,13 @@ Route::get('/dashboard', function () {
 })
 ->middleware(['auth'])
 ->name('dashboard');
+Route::get('/add',function (){
+  return view('add');
+})
+->middleware(['auth'])
+->name('add');
+Route::post('/add', [RegisteredUserController::class, 'add'])
+                ;
 Route::get('/dashboard-konsultant',function (){
   return view ('/dashboard-konsultant');
 })->middleware(['auth:konsultant','auth'])->name('dashboard-konsultant');

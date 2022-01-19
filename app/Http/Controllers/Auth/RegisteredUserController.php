@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Zgloszenie;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -71,5 +72,16 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
+    }
+    public function add(Request $request){
+      if(!empty($request->description)){
+        $zgl = new Zgloszenie();
+        $zgl->Konsultant = 2;
+        $zgl->Uzytkownik = Auth::id();
+        $zgl->Opis = $request->description;
+        $zgl->Status = 1;
+        $zgl->save();
+      }
+      return redirect(RouteServiceProvider::HOME);
     }
 }

@@ -52,19 +52,26 @@
   </div>
   <div style="clear:both"></div>
   </div>
-    <div class="grid gap-x-28 gap-y-10 ml-auto mr-auto" style="width:592px;padding-top:180px;grid-template-columns: 240px 240px; grid-template-rows:240px 240px">
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-        <a href="<?php echo e(route('add')); ?>">Dodaj zgłoszenie</a>  
-      </div>
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Usuń zgłoszenie
-      </div>
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Moje zgłoszenia
-      </div>
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Moje konto
-      </div>
+    <div class="ml-auto mr-auto" style="width:592px;padding-top:80px;">
+      <form class="" action="<?php echo e(route('add')); ?>" method="POST">
+        <?php echo csrf_field(); ?>
+        <h2 style="font-size:30px;">Opisz zgłoszenie</h2>
+        <textarea name="description" rows="8" cols="50"></textarea>
+        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.button','data' => ['class' => 'mt-4 bg-gradient-to-r from-mylogo to-mylogo']]); ?>
+<?php $component->withName('button'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['class' => 'mt-4 bg-gradient-to-r from-mylogo to-mylogo']); ?>
+            <?php echo e(__('Dodaj zgłoszenie')); ?>
+
+         <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+      </form>
     </div>
 
 
@@ -85,4 +92,4 @@
 
 </body>
 </html>
-<?php /**PATH C:\appliner\appliner_laravel_app\resources\views/dashboard.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\appliner\appliner_laravel_app\resources\views/add.blade.php ENDPATH**/ ?>
