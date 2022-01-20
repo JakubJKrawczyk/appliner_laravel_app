@@ -30,26 +30,15 @@
   </div>
   <div style="clear:both"></div>
   </div>
-    <div class="grid gap-x-28 gap-y-10 ml-auto mr-auto" style="width:592px;padding-top:180px;grid-template-columns: 240px 240px; grid-template-rows:240px 240px">
-<<<<<<< HEAD
-    <x-option text="Dodaj zgłoszenie"/>
-    <x-option text="Moje zgłoszenia">
-    <x-option text="Moje konto"/>
-    <x-option text="Lorem ipsum"/>
-=======
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-        <a href="{{ route('add') }}">Dodaj zgłoszenie</a>  
-      </div>
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Usuń zgłoszenie
-      </div>
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Moje zgłoszenia
-      </div>
-      <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Moje konto
-      </div>
->>>>>>> 5a43f8fd485d6ff7fd7ec7b3440a7c653febda6f
+    <div class="ml-auto mr-auto" style="width:592px;padding-top:80px;">
+      <form class="" action="{{ route('add') }}" method="POST">
+        @csrf
+        <h2 style="font-size:30px;">Opisz zgłoszenie</h2>
+        <textarea name="description" rows="8" cols="50"></textarea>
+        <x-button class="mt-4 bg-gradient-to-r from-mylogo to-mylogo">
+            {{ __('Dodaj zgłoszenie') }}
+        </x-button>
+      </form>
     </div>
 
 

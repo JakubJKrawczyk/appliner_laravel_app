@@ -15,10 +15,11 @@ class CreateZgloszeniaTable extends Migration
     {
         Schema::create('zgloszenia', function (Blueprint $table) {
             $table->id('ZgloszeniaID');
-            $table->unsignedBigInteger('Konsultant');
+            $table->unsignedBigInteger('Konsultant')->nullable();;
             $table->unsignedBigInteger('Uzytkownik');
             $table->text('Opis');
             $table->unsignedBigInteger('Status');
+            $table->timestamps();
             $table->foreign('Konsultant')->references('KonsultantID')->on('konsultant');
             $table->foreign('Status')->references('TypStatusID')->on('typstatus');
             $table->foreign('Uzytkownik')->references('id')->on('users');
