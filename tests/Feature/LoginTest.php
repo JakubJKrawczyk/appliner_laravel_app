@@ -37,18 +37,26 @@ class LoginTest extends TestCase
 
    public function test_login_with_valid_password(){
 
-        $user = User::factory() ->create();
+        $user = User::factory()->make();
        $response = $this->post('/login',[
            'email' => $user->email,
-           'password' => $user->Hash::make(password)
+           'password' => Hash::make($user->password)
        ]);
 
        $response -> assertRedirect('/dashboard');
-       $this->assertAuthenticatedAs($user);
    }
     public function test_if_authenticated_user_can_see_login(){
         $user = User::factory()->make();
         $response = $this->actingAs($user)->get('/login');
         $response->assertRedirect('/dashboard');
+    }
+    public function test_login(){
+        $response = $this->get('/login');
+        $response->assertSuccessful();
+        $response->assertViewIs('auth.login');
+
+        $user = User::factory()->create();
+        
+
     }
 }
