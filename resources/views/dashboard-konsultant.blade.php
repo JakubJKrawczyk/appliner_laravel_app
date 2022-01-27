@@ -18,10 +18,10 @@
   <section class="bg-white relative" style="height:1124px;font-family: 'Ubuntu', sans-serif;">
     <div class="w-full h-52 text-center">
     <div class="float-right">
-      <form method="POST" action="{{ route('logout') }}">
+      <form method="POST" action="{{ route('logout-konsultant') }}">
         @csrf
 
-        <x-dropdown-link :href="route('logout')"
+        <x-dropdown-link :href="route('logout-konsultant')"
                 onclick="event.preventDefault();
                             this.closest('form').submit();">
             {{ __('Log Out') }}

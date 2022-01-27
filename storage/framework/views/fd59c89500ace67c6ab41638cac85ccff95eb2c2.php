@@ -29,16 +29,16 @@
   <section class="bg-white relative" style="height:1124px;font-family: 'Ubuntu', sans-serif;">
     <div class="w-full h-52 text-center">
     <div class="float-right">
-      <form method="POST" action="<?php echo e(route('logout-konsultant')); ?>">
+      <form method="POST" action="<?php echo e(route('logout')); ?>">
         <?php echo csrf_field(); ?>
 
         <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown-link','data' => ['href' => route('logout-konsultant'),'onclick' => 'event.preventDefault();
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown-link','data' => ['href' => route('logout'),'onclick' => 'event.preventDefault();
                             this.closest(\'form\').submit();']]); ?>
 <?php $component->withName('dropdown-link'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['href' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(route('logout-konsultant')),'onclick' => 'event.preventDefault();
+<?php $component->withAttributes(['href' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(route('logout')),'onclick' => 'event.preventDefault();
                             this.closest(\'form\').submit();']); ?>
             <?php echo e(__('Log Out')); ?>
 
@@ -54,16 +54,16 @@
   </div>
     <div class="grid gap-x-28 gap-y-10 ml-auto mr-auto" style="width:592px;padding-top:180px;grid-template-columns: 240px 240px; grid-template-rows:240px 240px">
       <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-        <a href="<?php echo e(route('add')); ?>">Przypisane zgłoszenia</a>  
+        <a href="<?php echo e(route('add')); ?>">Archiwizacja zgłoszeń</a>  
       </div>
       <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Przekaż zgłoszenie
+          Filtrowanie zgłoszeń
       </div>
       <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Zakończone zgłoszenia
+          Usuń zgłoszenia
       </div>
       <div class="shadow-md rounded-lg p-5 pt-24 text-center text-2xl text-white" style="background-color:#eb8628;">
-          Moje konto
+          Zarządzaj kontami
       </div>
     </div>
 
@@ -85,4 +85,4 @@
 
 </body>
 </html>
-<?php /**PATH C:\Users\mysteriovs\Documents\Projects\appliner laravel\appliner_laravel_app\resources\views//dashboard-konsultant.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\mysteriovs\Documents\Projects\appliner laravel\appliner_laravel_app\resources\views/dashboard-admin.blade.php ENDPATH**/ ?>
